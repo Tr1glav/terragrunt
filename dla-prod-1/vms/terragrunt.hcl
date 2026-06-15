@@ -22,10 +22,9 @@ inputs = {
   username     = local.user.username
   public_key   = local.user.public_key
 
-  subnet       = "172.18.1.0/24"
+  
   vms = {
-    "router-1" = { external_ip = true, ip = "172.18.1.254", cpu = 1, ram = 2, disk = 20, flavor_type = "lowcost10", sg = [] }
-    "k3s-1"    = { external_ip = false, ip = "172.18.1.101", cpu = 2, ram = 4, disk = 40, flavor_type = "lowcost10", sg = ["k8s"] }
-  }
+    "router-1" = { external_ip = true, ip = "172.18.1.254", subnet = "172.18.1.0/24", cpu = 1, ram = 2, disk = 20, flavor_type = "lowcost10", sg = [] }
+    "k3s-1"    = { external_ip = false, ip = "172.18.1.101", subnet = "172.18.1.0/24", cpu = 2, ram = 4, disk = 40, flavor_type = "lowcost10", sg = ["k8s"] }}
 }
 
