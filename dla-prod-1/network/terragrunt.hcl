@@ -22,10 +22,6 @@ inputs = {
       "evo_sg_subnet": {
         "subnet": "172.18.1.0/24",
         "zone": "ru.AZ-3"
-      },
-      "evo_sg_subnet_2": {
-        "subnet": "172.18.2.0/24",
-        "zone": "ru.AZ-2"
       }
     }
   }
